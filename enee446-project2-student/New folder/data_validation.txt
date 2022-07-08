@@ -1,0 +1,878 @@
+./sim -n 1 ./traces/simple-1c.trace
+Cache Settings:
+	Size: 	8192
+	Block size: 	16
+*** CACHE STATISTICS ***
+  CORE 0
+  accesses:        26
+  misses:          1
+  miss rate:       0.038462 (0.961538)
+  evictions:       0
+  num fetches:     1
+  num responses:   0
+
+  TRAFFIC
+  demand fetch (words):           4
+  broadcasts:                     1
+  cache-to-cache copies (words):  0
+  copies back to memory (words):  4
+
+*** VALIDATION REPORT ***
+[26]
+[1]
+4
+1
+0
+4
+
+
+./sim -n 2 ./traces/simple-2c.trace
+Cache Settings:
+	Size: 	8192
+	Block size: 	16
+*** CACHE STATISTICS ***
+  CORE 0
+  accesses:        2
+  misses:          1
+  miss rate:       0.500000 (0.500000)
+  evictions:       0
+  num fetches:     1
+  num responses:   2
+
+  CORE 1
+  accesses:        2
+  misses:          2
+  miss rate:       1.000000 (0.000000)
+  evictions:       0
+  num fetches:     2
+  num responses:   0
+
+  TRAFFIC
+  demand fetch (words):           12
+  broadcasts:                     4
+  cache-to-cache copies (words):  8
+  copies back to memory (words):  4
+
+*** VALIDATION REPORT ***
+[2, 2]
+[1, 2]
+12
+4
+8
+4
+
+
+./sim -n 4 ./traces/simple-4c.trace
+Cache Settings:
+	Size: 	8192
+	Block size: 	16
+*** CACHE STATISTICS ***
+  CORE 0
+  accesses:        2
+  misses:          1
+  miss rate:       0.500000 (0.500000)
+  evictions:       0
+  num fetches:     1
+  num responses:   4
+
+  CORE 1
+  accesses:        3
+  misses:          2
+  miss rate:       0.666667 (0.333333)
+  evictions:       0
+  num fetches:     2
+  num responses:   0
+
+  CORE 2
+  accesses:        2
+  misses:          1
+  miss rate:       0.500000 (0.500000)
+  evictions:       0
+  num fetches:     1
+  num responses:   0
+
+  CORE 3
+  accesses:        2
+  misses:          1
+  miss rate:       0.500000 (0.500000)
+  evictions:       0
+  num fetches:     1
+  num responses:   0
+
+  TRAFFIC
+  demand fetch (words):           20
+  broadcasts:                     6
+  cache-to-cache copies (words):  16
+  copies back to memory (words):  4
+
+*** VALIDATION REPORT ***
+[2, 3, 2, 2]
+[1, 2, 1, 1]
+20
+6
+16
+4
+
+
+./sim -n 1 ./traces/spice-1c.trace
+Cache Settings:
+	Size: 	8192
+	Block size: 	16
+processed 100000 references
+processed 200000 references
+processed 300000 references
+processed 400000 references
+processed 500000 references
+processed 600000 references
+processed 700000 references
+processed 800000 references
+processed 900000 references
+processed 1000000 references
+*** CACHE STATISTICS ***
+  CORE 0
+  accesses:        1000001
+  misses:          25966
+  miss rate:       0.025966 (0.974034)
+  evictions:       25454
+  num fetches:     25966
+  num responses:   0
+
+  TRAFFIC
+  demand fetch (words):           103864
+  broadcasts:                     25966
+  cache-to-cache copies (words):  0
+  copies back to memory (words):  8472
+
+*** VALIDATION REPORT ***
+[1000001]
+[25966]
+103864
+25966
+0
+8472
+
+
+./sim -n 2 ./traces/fft-2c.trace 
+Cache Settings:
+	Size: 	8192
+	Block size: 	16
+processed 100000 references
+processed 200000 references
+processed 300000 references
+processed 400000 references
+processed 500000 references
+processed 600000 references
+processed 700000 references
+processed 800000 references
+processed 900000 references
+processed 1000000 references
+processed 1100000 references
+processed 1200000 references
+processed 1300000 references
+processed 1400000 references
+processed 1500000 references
+processed 1600000 references
+processed 1700000 references
+processed 1800000 references
+processed 1900000 references
+processed 2000000 references
+processed 2100000 references
+processed 2200000 references
+processed 2300000 references
+processed 2400000 references
+processed 2500000 references
+processed 2600000 references
+processed 2700000 references
+processed 2800000 references
+processed 2900000 references
+processed 3000000 references
+processed 3100000 references
+processed 3200000 references
+processed 3300000 references
+processed 3400000 references
+processed 3500000 references
+processed 3600000 references
+processed 3700000 references
+processed 3800000 references
+processed 3900000 references
+processed 4000000 references
+processed 4100000 references
+processed 4200000 references
+processed 4300000 references
+processed 4400000 references
+processed 4500000 references
+processed 4600000 references
+processed 4700000 references
+processed 4800000 references
+processed 4900000 references
+processed 5000000 references
+processed 5100000 references
+processed 5200000 references
+processed 5300000 references
+processed 5400000 references
+processed 5500000 references
+processed 5600000 references
+processed 5700000 references
+processed 5800000 references
+processed 5900000 references
+processed 6000000 references
+processed 6100000 references
+processed 6200000 references
+processed 6300000 references
+processed 6400000 references
+processed 6500000 references
+processed 6600000 references
+processed 6700000 references
+processed 6800000 references
+processed 6900000 references
+*** CACHE STATISTICS ***
+  CORE 0
+  accesses:        3465000
+  misses:          498663
+  miss rate:       0.143914 (0.856086)
+  evictions:       328714
+  num fetches:     498663
+  num responses:   202272
+
+  CORE 1
+  accesses:        3464832
+  misses:          311273
+  miss rate:       0.089838 (0.910162)
+  evictions:       141454
+  num fetches:     311273
+  num responses:   193779
+
+  TRAFFIC
+  demand fetch (words):           3239744
+  broadcasts:                     1124036
+  cache-to-cache copies (words):  1584204
+  copies back to memory (words):  2698988
+
+*** VALIDATION REPORT ***
+[3465000, 3464832]
+[498663, 311273]
+3239744
+1124036
+1584204
+2698988
+
+
+./sim -n 4 ./traces/fft-4c.trace
+Cache Settings:
+	Size: 	8192
+	Block size: 	16
+processed 100000 references
+processed 200000 references
+processed 300000 references
+processed 400000 references
+processed 500000 references
+processed 600000 references
+processed 700000 references
+processed 800000 references
+processed 900000 references
+processed 1000000 references
+processed 1100000 references
+processed 1200000 references
+processed 1300000 references
+processed 1400000 references
+processed 1500000 references
+processed 1600000 references
+processed 1700000 references
+processed 1800000 references
+processed 1900000 references
+processed 2000000 references
+processed 2100000 references
+processed 2200000 references
+processed 2300000 references
+processed 2400000 references
+processed 2500000 references
+processed 2600000 references
+processed 2700000 references
+processed 2800000 references
+processed 2900000 references
+processed 3000000 references
+processed 3100000 references
+processed 3200000 references
+processed 3300000 references
+processed 3400000 references
+processed 3500000 references
+processed 3600000 references
+processed 3700000 references
+processed 3800000 references
+processed 3900000 references
+processed 4000000 references
+processed 4100000 references
+processed 4200000 references
+processed 4300000 references
+processed 4400000 references
+processed 4500000 references
+processed 4600000 references
+processed 4700000 references
+processed 4800000 references
+processed 4900000 references
+processed 5000000 references
+processed 5100000 references
+processed 5200000 references
+processed 5300000 references
+processed 5400000 references
+processed 5500000 references
+processed 5600000 references
+processed 5700000 references
+processed 5800000 references
+processed 5900000 references
+processed 6000000 references
+processed 6100000 references
+processed 6200000 references
+processed 6300000 references
+processed 6400000 references
+processed 6500000 references
+processed 6600000 references
+processed 6700000 references
+processed 6800000 references
+processed 6900000 references
+*** CACHE STATISTICS ***
+  CORE 0
+  accesses:        1734444
+  misses:          309761
+  miss rate:       0.178594 (0.821406)
+  evictions:       144470
+  num fetches:     309761
+  num responses:   226902
+
+  CORE 1
+  accesses:        1734230
+  misses:          332927
+  miss rate:       0.191974 (0.808026)
+  evictions:       169952
+  num fetches:     332927
+  num responses:   190114
+
+  CORE 2
+  accesses:        1734209
+  misses:          290425
+  miss rate:       0.167468 (0.832532)
+  evictions:       124939
+  num fetches:     290425
+  num responses:   204774
+
+  CORE 3
+  accesses:        1734225
+  misses:          288028
+  miss rate:       0.166085 (0.833915)
+  evictions:       124206
+  num fetches:     288028
+  num responses:   208478
+
+  TRAFFIC
+  demand fetch (words):           4884564
+  broadcasts:                     1801211
+  cache-to-cache copies (words):  3321072
+  copies back to memory (words):  3772700
+
+*** VALIDATION REPORT ***
+[1734444, 1734230, 1734209, 1734225]
+[309761, 332927, 290425, 288028]
+4884564
+1801211
+3321072
+3772700
+
+
+./sim -n 8 ./traces/fft-8c.trace
+Cache Settings:
+	Size: 	8192
+	Block size: 	16
+processed 100000 references
+processed 200000 references
+processed 300000 references
+processed 400000 references
+processed 500000 references
+processed 600000 references
+processed 700000 references
+processed 800000 references
+processed 900000 references
+processed 1000000 references
+processed 1100000 references
+processed 1200000 references
+processed 1300000 references
+processed 1400000 references
+processed 1500000 references
+processed 1600000 references
+processed 1700000 references
+processed 1800000 references
+processed 1900000 references
+processed 2000000 references
+processed 2100000 references
+processed 2200000 references
+processed 2300000 references
+processed 2400000 references
+processed 2500000 references
+processed 2600000 references
+processed 2700000 references
+processed 2800000 references
+processed 2900000 references
+processed 3000000 references
+processed 3100000 references
+processed 3200000 references
+processed 3300000 references
+processed 3400000 references
+processed 3500000 references
+processed 3600000 references
+processed 3700000 references
+processed 3800000 references
+processed 3900000 references
+processed 4000000 references
+processed 4100000 references
+processed 4200000 references
+processed 4300000 references
+processed 4400000 references
+processed 4500000 references
+processed 4600000 references
+processed 4700000 references
+processed 4800000 references
+processed 4900000 references
+processed 5000000 references
+processed 5100000 references
+processed 5200000 references
+processed 5300000 references
+processed 5400000 references
+processed 5500000 references
+processed 5600000 references
+processed 5700000 references
+processed 5800000 references
+processed 5900000 references
+processed 6000000 references
+processed 6100000 references
+processed 6200000 references
+processed 6300000 references
+processed 6400000 references
+processed 6500000 references
+processed 6600000 references
+processed 6700000 references
+processed 6800000 references
+processed 6900000 references
+*** CACHE STATISTICS ***
+  CORE 0
+  accesses:        869616
+  misses:          324157
+  miss rate:       0.372759 (0.627241)
+  evictions:       248354
+  num fetches:     324157
+  num responses:   189796
+
+  CORE 1
+  accesses:        869343
+  misses:          322744
+  miss rate:       0.371250 (0.628750)
+  evictions:       244995
+  num fetches:     322744
+  num responses:   215090
+
+  CORE 2
+  accesses:        869385
+  misses:          314027
+  miss rate:       0.361206 (0.638794)
+  evictions:       247886
+  num fetches:     314027
+  num responses:   178316
+
+  CORE 3
+  accesses:        869504
+  misses:          334488
+  miss rate:       0.384688 (0.615312)
+  evictions:       245912
+  num fetches:     334488
+  num responses:   220542
+
+  CORE 4
+  accesses:        869336
+  misses:          320444
+  miss rate:       0.368608 (0.631392)
+  evictions:       243534
+  num fetches:     320444
+  num responses:   199609
+
+  CORE 5
+  accesses:        869326
+  misses:          319702
+  miss rate:       0.367758 (0.632242)
+  evictions:       244583
+  num fetches:     319702
+  num responses:   194821
+
+  CORE 6
+  accesses:        869335
+  misses:          335742
+  miss rate:       0.386206 (0.613794)
+  evictions:       244934
+  num fetches:     335742
+  num responses:   216189
+
+  CORE 7
+  accesses:        869300
+  misses:          312350
+  miss rate:       0.359312 (0.640688)
+  evictions:       248375
+  num fetches:     312350
+  num responses:   182059
+
+  TRAFFIC
+  demand fetch (words):           10334616
+  broadcasts:                     3782687
+  cache-to-cache copies (words):  6385688
+  copies back to memory (words):  8924664
+
+*** VALIDATION REPORT ***
+[869616, 869343, 869385, 869504, 869336, 869326, 869335, 869300]
+[324157, 322744, 314027, 334488, 320444, 319702, 335742, 312350]
+10334616
+3782687
+6385688
+8924664
+
+
+./sim -n 4 -us 16384 ./traces/fft-4c.trace
+Cache Settings:
+	Size: 	16384
+	Block size: 	16
+processed 100000 references
+processed 200000 references
+processed 300000 references
+processed 400000 references
+processed 500000 references
+processed 600000 references
+processed 700000 references
+processed 800000 references
+processed 900000 references
+processed 1000000 references
+processed 1100000 references
+processed 1200000 references
+processed 1300000 references
+processed 1400000 references
+processed 1500000 references
+processed 1600000 references
+processed 1700000 references
+processed 1800000 references
+processed 1900000 references
+processed 2000000 references
+processed 2100000 references
+processed 2200000 references
+processed 2300000 references
+processed 2400000 references
+processed 2500000 references
+processed 2600000 references
+processed 2700000 references
+processed 2800000 references
+processed 2900000 references
+processed 3000000 references
+processed 3100000 references
+processed 3200000 references
+processed 3300000 references
+processed 3400000 references
+processed 3500000 references
+processed 3600000 references
+processed 3700000 references
+processed 3800000 references
+processed 3900000 references
+processed 4000000 references
+processed 4100000 references
+processed 4200000 references
+processed 4300000 references
+processed 4400000 references
+processed 4500000 references
+processed 4600000 references
+processed 4700000 references
+processed 4800000 references
+processed 4900000 references
+processed 5000000 references
+processed 5100000 references
+processed 5200000 references
+processed 5300000 references
+processed 5400000 references
+processed 5500000 references
+processed 5600000 references
+processed 5700000 references
+processed 5800000 references
+processed 5900000 references
+processed 6000000 references
+processed 6100000 references
+processed 6200000 references
+processed 6300000 references
+processed 6400000 references
+processed 6500000 references
+processed 6600000 references
+processed 6700000 references
+processed 6800000 references
+processed 6900000 references
+*** CACHE STATISTICS ***
+  CORE 0
+  accesses:        1734444
+  misses:          272135
+  miss rate:       0.156900 (0.843100)
+  evictions:       106303
+  num fetches:     272135
+  num responses:   233603
+
+  CORE 1
+  accesses:        1734230
+  misses:          269803
+  miss rate:       0.155575 (0.844425)
+  evictions:       106303
+  num fetches:     269803
+  num responses:   193653
+
+  CORE 2
+  accesses:        1734209
+  misses:          256103
+  miss rate:       0.147677 (0.852323)
+  evictions:       90102
+  num fetches:     256103
+  num responses:   211918
+
+  CORE 3
+  accesses:        1734225
+  misses:          254355
+  miss rate:       0.146668 (0.853332)
+  evictions:       90009
+  num fetches:     254355
+  num responses:   215162
+
+  TRAFFIC
+  demand fetch (words):           4209584
+  broadcasts:                     1656269
+  cache-to-cache copies (words):  3417344
+  copies back to memory (words):  3494612
+
+*** VALIDATION REPORT ***
+[1734444, 1734230, 1734209, 1734225]
+[272135, 269803, 256103, 254355]
+4209584
+1656269
+3417344
+3494612
+
+
+./sim -n 2 -bs 32 -us 16384 ./traces/fft-2c.trace
+Cache Settings:
+	Size: 	16384
+	Block size: 	32
+processed 100000 references
+processed 200000 references
+processed 300000 references
+processed 400000 references
+processed 500000 references
+processed 600000 references
+processed 700000 references
+processed 800000 references
+processed 900000 references
+processed 1000000 references
+processed 1100000 references
+processed 1200000 references
+processed 1300000 references
+processed 1400000 references
+processed 1500000 references
+processed 1600000 references
+processed 1700000 references
+processed 1800000 references
+processed 1900000 references
+processed 2000000 references
+processed 2100000 references
+processed 2200000 references
+processed 2300000 references
+processed 2400000 references
+processed 2500000 references
+processed 2600000 references
+processed 2700000 references
+processed 2800000 references
+processed 2900000 references
+processed 3000000 references
+processed 3100000 references
+processed 3200000 references
+processed 3300000 references
+processed 3400000 references
+processed 3500000 references
+processed 3600000 references
+processed 3700000 references
+processed 3800000 references
+processed 3900000 references
+processed 4000000 references
+processed 4100000 references
+processed 4200000 references
+processed 4300000 references
+processed 4400000 references
+processed 4500000 references
+processed 4600000 references
+processed 4700000 references
+processed 4800000 references
+processed 4900000 references
+processed 5000000 references
+processed 5100000 references
+processed 5200000 references
+processed 5300000 references
+processed 5400000 references
+processed 5500000 references
+processed 5600000 references
+processed 5700000 references
+processed 5800000 references
+processed 5900000 references
+processed 6000000 references
+processed 6100000 references
+processed 6200000 references
+processed 6300000 references
+processed 6400000 references
+processed 6500000 references
+processed 6600000 references
+processed 6700000 references
+processed 6800000 references
+processed 6900000 references
+*** CACHE STATISTICS ***
+  CORE 0
+  accesses:        3465000
+  misses:          241620
+  miss rate:       0.069732 (0.930268)
+  evictions:       115700
+  num fetches:     241620
+  num responses:   142020
+
+  CORE 1
+  accesses:        3464832
+  misses:          175773
+  miss rate:       0.050731 (0.949269)
+  evictions:       49864
+  num fetches:     175773
+  num responses:   137850
+
+  TRAFFIC
+  demand fetch (words):           3339144
+  broadcasts:                     619021
+  cache-to-cache copies (words):  2238960
+  copies back to memory (words):  3033336
+
+*** VALIDATION REPORT ***
+[3465000, 3464832]
+[241620, 175773]
+3339144
+619021
+2238960
+3033336
+
+
+./sim -n 4 -bs 32 -us 16384 ./traces/fft-4c.trace
+Cache Settings:
+	Size: 	16384
+	Block size: 	32
+processed 100000 references
+processed 200000 references
+processed 300000 references
+processed 400000 references
+processed 500000 references
+processed 600000 references
+processed 700000 references
+processed 800000 references
+processed 900000 references
+processed 1000000 references
+processed 1100000 references
+processed 1200000 references
+processed 1300000 references
+processed 1400000 references
+processed 1500000 references
+processed 1600000 references
+processed 1700000 references
+processed 1800000 references
+processed 1900000 references
+processed 2000000 references
+processed 2100000 references
+processed 2200000 references
+processed 2300000 references
+processed 2400000 references
+processed 2500000 references
+processed 2600000 references
+processed 2700000 references
+processed 2800000 references
+processed 2900000 references
+processed 3000000 references
+processed 3100000 references
+processed 3200000 references
+processed 3300000 references
+processed 3400000 references
+processed 3500000 references
+processed 3600000 references
+processed 3700000 references
+processed 3800000 references
+processed 3900000 references
+processed 4000000 references
+processed 4100000 references
+processed 4200000 references
+processed 4300000 references
+processed 4400000 references
+processed 4500000 references
+processed 4600000 references
+processed 4700000 references
+processed 4800000 references
+processed 4900000 references
+processed 5000000 references
+processed 5100000 references
+processed 5200000 references
+processed 5300000 references
+processed 5400000 references
+processed 5500000 references
+processed 5600000 references
+processed 5700000 references
+processed 5800000 references
+processed 5900000 references
+processed 6000000 references
+processed 6100000 references
+processed 6200000 references
+processed 6300000 references
+processed 6400000 references
+processed 6500000 references
+processed 6600000 references
+processed 6700000 references
+processed 6800000 references
+processed 6900000 references
+*** CACHE STATISTICS ***
+  CORE 0
+  accesses:        1734444
+  misses:          189228
+  miss rate:       0.109100 (0.890900)
+  evictions:       53644
+  num fetches:     189228
+  num responses:   161794
+
+  CORE 1
+  accesses:        1734230
+  misses:          170051
+  miss rate:       0.098056 (0.901944)
+  evictions:       53864
+  num fetches:     170051
+  num responses:   129426
+
+  CORE 2
+  accesses:        1734209
+  misses:          183530
+  miss rate:       0.105829 (0.894171)
+  evictions:       53598
+  num fetches:     183530
+  num responses:   158689
+
+  CORE 3
+  accesses:        1734225
+  misses:          170834
+  miss rate:       0.098507 (0.901493)
+  evictions:       53612
+  num fetches:     170834
+  num responses:   146966
+
+  TRAFFIC
+  demand fetch (words):           5709144
+  broadcasts:                     1068340
+  cache-to-cache copies (words):  4775000
+  copies back to memory (words):  4493696
+
+*** VALIDATION REPORT ***
+[1734444, 1734230, 1734209, 1734225]
+[189228, 170051, 183530, 170834]
+5709144
+1068340
+4775000
+4493696

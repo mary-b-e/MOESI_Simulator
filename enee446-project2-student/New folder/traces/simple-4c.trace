@@ -1,0 +1,9 @@
+0 0 ffffffff    # cache read miss, load and mark as exclusive (broadcast a read miss on bus)
+1 0 ffffffff    # cache read miss, load and mark as shared    (broadcast a read miss on bus; mark line in cache 0 shared)
+2 0 ffffffff    # cache read miss, load and mark as shared    (broadcast a read miss on bus)
+3 0 ffffffff    # cache read miss, load and mark as shared    (broadcast a read miss on bus)
+1 0 ffffffff    # cache read hit
+2 0 ffffffff    # cache read hit
+3 0 ffffffff    # cache read hit
+0 1 ffffffff    # cache write hit, mark as modified           (broadcast a write hit on bus; invalidate line in cache 1-3)
+1 0 ffffffff    # cache read miss, load and mark as shared    (broadcast a read miss on bus; mark line in cache 0 owned)

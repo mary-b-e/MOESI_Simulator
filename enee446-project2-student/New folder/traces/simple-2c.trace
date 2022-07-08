@@ -1,0 +1,4 @@
+0 0 abcdbeef    # cache read miss, load and mark as exclusive (broadcast a read miss on bus)
+1 0 abcdbeef    # cache read miss, load and mark as shared    (broadcast a read miss on bus; mark line in cache 0 shared)
+0 1 abcdbeef    # cache write hit                             (broadcast a write hit on bus; mark line in cache 1 invalid)
+1 0 abcdbeef    # cache read miss, load and marked as shared  (broadcast a read miss on bus; mark line in cache 0 owned)
