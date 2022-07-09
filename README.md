@@ -1,4 +1,4 @@
 # MOESI_Simulator
-This is a simulator of a cache using the MOESI coherency protocol written in C for multicached systems and uses a cli for navigation
-# NOTE: There has been some issues with connecting my local vscode to the remote github account, and to do this properly I will need to make a new key to use. 
-I will be doing this later to put the full repo here
+This is a simulator of a cache using the MOESI coherency protocol written in C for multi-cached system. It would take in a program in machine code containing instructions to store, modify, and write different variables, all to save in the cache. In processing each of those instructions the MOESI simulator would determine where in the cache it is stored, when to pop the values, what cache has the clean copy, and what communication would occur between different caches.
+
+This project brings to light my understanding of how a computer works from the ground up, not only in the subject matter of caches or how machine code works, but also in my use of C, one of the lowest level programming languages. It also displays my knowledge of state diagrams - something used frequently in robotic and AI - and my ability to use them to optimize the flow of the code.
